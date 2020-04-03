@@ -25,7 +25,7 @@
         <jetty.version>8.1.8</jetty.version>
         <jfinal.version>2.2</jfinal.version>
         <cglib.version>3.1</cglib.version>
-        
+
         <beetl.version>2.2.5</beetl.version>
 
         <cos.version>26Dec2008</cos.version>
@@ -34,41 +34,79 @@
         <log4j.version>1.2.16</log4j.version>
         <slf4j.version>1.6.1</slf4j.version>
         <jxl.version>2.6.12</jxl.version>
-
+        <kettle.version>5.4.0.1-130</kettle.version>
     </properties>
 
     <dependencies>
-    
+
+<!--        <dependency>-->
+<!--			<groupId>cn.benma666</groupId>-->
+<!--			<artifactId>myutils</artifactId>-->
+<!--			<version>0.1.0</version>-->
+<!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
         <dependency>
-			<groupId>cn.benma666</groupId>
-			<artifactId>myutils</artifactId>
-			<version>0.0.1</version>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
         </dependency>
-        
+        <!-- kettle start-->
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-vfs2 -->
+        <dependency>
+            <groupId>pentaho-kettle</groupId>
+            <artifactId>kettle-core</artifactId>
+            <version>${kettle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.verhas</groupId>
+            <artifactId>license3j </artifactId>
+            <version>1.0.7 </version>
+        </dependency>
+        <dependency>
+            <groupId>pentaho-kettle</groupId>
+            <artifactId>kettle-dbdialog</artifactId>
+            <version>${kettle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pentaho-kettle</groupId>
+            <artifactId>kettle-engine</artifactId>
+            <version>${kettle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pentaho-kettle</groupId>
+            <artifactId>kettle-ui-swt</artifactId>
+            <version>${kettle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pentaho</groupId>
+            <artifactId>metastore</artifactId>
+            <version>${kettle.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
-        
+
         <dependency>
 		  <groupId>oracle.ojdbc</groupId>
 		  <artifactId>ojdbc</artifactId>
 		  <version>${oracle.version}</version>
 		</dependency>
-        
+
 <!--         <dependency> -->
 <!--             <groupId>postgresql</groupId> -->
 <!--             <artifactId>postgresql</artifactId> -->
 <!--             <version>9.1-901-1.jdbc4</version> -->
 <!--         </dependency> -->
-        
+
 <!--         <dependency> -->
 <!--             <groupId>com.h2database</groupId> -->
 <!--             <artifactId>h2</artifactId> -->
 <!--             <version>1.4.187</version> -->
 <!--         </dependency> -->
-        
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -81,7 +119,7 @@
             <artifactId>jfinal</artifactId>
             <version>${jfinal.version}</version>
         </dependency>
-        
+
         <dependency>
     		<groupId>cglib</groupId>
     		<artifactId>cglib-nodep</artifactId>
@@ -101,17 +139,17 @@
             <scope>provided</scope>
         </dependency>
 
-<!--         <dependency> -->
-<!--             <groupId>com.ibeetl</groupId> -->
-<!--             <artifactId>beetl</artifactId> -->
-<!--             <version>${beetl.version}</version> -->
-<!--         </dependency> -->
+         <dependency>
+             <groupId>com.ibeetl</groupId>
+             <artifactId>beetl</artifactId>
+             <version>${beetl.version}</version>
+         </dependency>
 
-<!--         <dependency> -->
-<!--             <groupId>com.alibaba</groupId> -->
-<!--             <artifactId>druid</artifactId> -->
-<!--             <version>${druid.version}</version> -->
-<!--         </dependency> -->
+         <dependency>
+             <groupId>com.alibaba</groupId>
+             <artifactId>druid</artifactId>
+             <version>${druid.version}</version>
+         </dependency>
 
         <dependency>
             <groupId>net.sf.ehcache</groupId>
@@ -119,41 +157,69 @@
             <version>${ehcache.version}</version>
         </dependency>
 
-<!--         <dependency> -->
-<!--             <groupId>com.alibaba</groupId> -->
-<!--             <artifactId>fastjson</artifactId> -->
-<!--             <version>${fastjson.version}</version> -->
-<!--         </dependency> -->
+         <dependency>
+             <groupId>com.alibaba</groupId>
+             <artifactId>fastjson</artifactId>
+             <version>${fastjson.version}</version>
+         </dependency>
 
-<!--         <dependency> -->
-<!--             <groupId>log4j</groupId> -->
-<!--             <artifactId>log4j</artifactId> -->
-<!--             <version>${log4j.version}</version> -->
-<!--         </dependency> -->
+         <dependency>
+             <groupId>log4j</groupId>
+             <artifactId>log4j</artifactId>
+             <version>${log4j.version}</version>
+         </dependency>
 
-<!--         <dependency> -->
-<!--             <groupId>org.slf4j</groupId> -->
-<!--             <artifactId>slf4j-api</artifactId> -->
-<!--             <version>${slf4j.version}</version> -->
-<!--         </dependency> -->
+         <dependency>
+             <groupId>org.slf4j</groupId>
+             <artifactId>slf4j-api</artifactId>
+             <version>${slf4j.version}</version>
+         </dependency>
 
-<!--         <dependency> -->
-<!--             <groupId>org.slf4j</groupId> -->
-<!--             <artifactId>slf4j-log4j12</artifactId> -->
-<!--             <version>${slf4j.version}</version> -->
-<!--         </dependency> -->
+         <dependency>
+             <groupId>org.slf4j</groupId>
+             <artifactId>slf4j-log4j12</artifactId>
+             <version>${slf4j.version}</version>
+         </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
+        <dependency><!--apeach cli 脚本-->
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.4</version>
+        </dependency>
 
         <dependency>
             <groupId>net.sourceforge.jexcelapi</groupId>
             <artifactId>jxl</artifactId>
             <version>${jxl.version}</version>
         </dependency>
+        <!--
+            mvn install:install-file -Dfile=KettleUtil.jar -DgroupId=net.oschina -DartifactId=KettleUtil -Dversion=0.0.1  -Dpackaging=jar
+        -->
+        <dependency>
+            <groupId>net.oschina</groupId>
+            <artifactId>KettleUtil</artifactId>
+        <version>0.0.1</version>
+         </dependency>
+        <!--mvn install:install-file -Dfile=myutils-0.1.0.jar -DgroupId=cn.benma666 -DartifactId=myutils -Dversion=0.1.0  -Dpackaging=jar-->
+        <dependency>
+            <groupId>cn.benma666</groupId>
+            <artifactId>myutils</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+        <!--
+        mvn install:install-file -Dfile=kettle-core-5.4.0.1-130.jar -DgroupId=pentaho-kettle -DartifactId=kettle-core -Dversion=5.4.0.1-130  -Dpackaging=jar
+        -->
 
-<!-- 		<dependency> -->
-<!-- 			<groupId>net.lingala.zip4j</groupId> -->
-<!-- 			<artifactId>zip4j</artifactId> -->
-<!-- 			<version>1.3.1</version> -->
-<!-- 		</dependency> -->
+
+
+
+
+        <dependency>
+ 			<groupId>net.lingala.zip4j</groupId>
+ 			<artifactId>zip4j</artifactId>
+ 			<version>1.3.1</version>
+ 		</dependency>
+
     </dependencies>
     <build>
         <finalName>eova</finalName>
@@ -186,7 +252,8 @@
                     <warSourceExcludes>jetty-*.jar</warSourceExcludes>
                     <webResources>
                         <resource>
-                            <directory>${basedir}/src/main/webapp</directory>
+<!--                            <directory>${basedir}/src/main/webapp</directory>-->
+                            <directory>${basedir}/webapp</directory>-->
                         </resource>
                     </webResources>
                 </configuration>
@@ -198,7 +265,7 @@
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>2.5</version>
             </plugin>
-            
+
         </plugins>
     </build>
 </project>
